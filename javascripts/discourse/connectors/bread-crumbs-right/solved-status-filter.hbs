@@ -1,0 +1,18 @@
+{{#if siteSettings.solved_enabled}}
+<div class="status-filter">
+  {{#each statuses}}
+  <li>{{this}}</li>
+
+</div>
+  {{!-- {{combo-box
+    class="solved-status-filter"
+    content=statuses
+    value=status
+    valueProperty="value"
+    onChange=(action "changeStatus")
+    options=(hash
+      caretDownIcon="caret-right"
+      caretUpIcon="caret-down"
+    )
+  }} --}}
+{{/if}}
