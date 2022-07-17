@@ -1,7 +1,10 @@
 {{#if siteSettings.solved_enabled}}
 <div class="status-filter">
-  {{#each statuses}}
-  <li>{{this}}</li>
+  {{#each statuses as status ||}}
+  <li>{{status}}</li>
+  
+    
+  {{/each}}
 
 </div>
   {{!-- {{combo-box
