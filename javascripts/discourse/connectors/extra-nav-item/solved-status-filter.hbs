@@ -1,11 +1,11 @@
 {{#if siteSettings.solved_enabled}}
-<div class="status-filter">
+{{!-- <div class="status-filter">
   {{#each statuses as status}}
   <li>hello</li>  
   {{/each}}
 
-</div>
-  {{!-- {{combo-box
+</div> --}}
+  {{combo-box
     class="solved-status-filter"
     content=statuses
     value=status
@@ -15,5 +15,5 @@
       caretDownIcon="caret-right"
       caretUpIcon="caret-down"
     )
-  }} --}}
+  }}
 {{/if}}
