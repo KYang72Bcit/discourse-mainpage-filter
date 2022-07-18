@@ -21,7 +21,7 @@ export default {
   },
 
   setupComponent(args, component) {
-    const statuses = ["Recent", "Solved", "Unsolved"].map((status) => {
+    const statuses = ["Recent", "Solved", "Unsolved", "Unanswered"].map((status) => {
       return {
         name: I18n.t(`solved.topic_status_filter.${status}`),
         value: status,
@@ -34,8 +34,10 @@ export default {
       component.set("status", "Solved");
     } else if (queryStrings.match(/solved=no/)) {
       component.set("status", "Unsolved");
-    } else {
+    } else if (queryStrings.match(/solved=Recent/)){
       component.set("status", "Recent");
+    } else {
+      component.set("status", "Unanswered");
     }
   },
 
@@ -44,10 +46,10 @@ export default {
       const router = getOwner(this).lookup("router:main");
       if (newStatus ==="Unanswered") {
         console.log("unanswered");
-        router.transitionTo('discovery.latest', { path: '?:max_posts=1'})
-      } else {
+        
+      } 
         router.transitionTo({ queryParams: { solved: newStatus } });
-      }
+      
       
     },
   },
