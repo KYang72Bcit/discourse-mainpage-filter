@@ -49,8 +49,9 @@ export default {
     },
 
     getDisnitation (value) {
-      const router = getOwner(this).lookup("router:main");
-      
+      //const router = getOwner(this).lookup("router:main");
+      console.log (value);
+
     }
   },
 
