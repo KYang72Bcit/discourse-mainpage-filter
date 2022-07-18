@@ -1,6 +1,8 @@
 <div>
  {{#each this.statuses as |status|}}
-   {{status.value}}
+    <button type="button" {{on "click" (this.changeStatus status.value)}}>
+      {{status.value}}  
+    </button>
   {{!-- {{on 'click' this.changeStatus status.value}} --}}
  {{/each}}
 </div>
