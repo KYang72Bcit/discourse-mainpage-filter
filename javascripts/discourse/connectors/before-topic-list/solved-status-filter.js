@@ -44,7 +44,7 @@ export default {
       const router = getOwner(this).lookup("router:main");
       if (newStatus ==="Unanswered") {
         console.log("unanswered");
-        router.transitionTo('max_posts', 1)
+        router.transitionTo('latest', 'max_post=1')
       } else {
         router.transitionTo({ queryParams: { solved: newStatus } });
       }
