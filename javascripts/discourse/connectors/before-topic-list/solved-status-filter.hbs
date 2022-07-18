@@ -1,6 +1,6 @@
 <div>
  {{#each this.statuses as |status|}}
-    <button type="button" {{on 'click' this.changeStatus status.value}}>
+    <button type="button" {{on 'click' (fn this.getDisnitation 1 )}}>
       {{status.value}}  
     </button>
   {{!-- {{on 'click' this.changeStatus status.value}} --}}

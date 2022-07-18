@@ -48,11 +48,11 @@ export default {
       router.transitionTo({ queryParams: { solved: newStatus } });
     },
 
-    // getDisnitation (value) {
-    //   //const router = getOwner(this).lookup("router:main");
-    //   console.log (value);
+    getDisnitation (value) {
+      //const router = getOwner(this).lookup("router:main");
+      console.log (value);
 
-    // }
+    }
   },
 
   
