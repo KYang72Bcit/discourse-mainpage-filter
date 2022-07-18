@@ -42,9 +42,7 @@ export default {
   actions: {
     changeStatus(newStatus) {
       const router = getOwner(this).lookup("router:main");
-      if (newStatus && newStatus !== "Recent") {
-        newStatus = newStatus === "solved" ? "yes" : "no";
-      }
+      
       router.transitionTo({ queryParams: { solved: newStatus } });
     },
 
