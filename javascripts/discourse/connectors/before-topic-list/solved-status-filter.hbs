@@ -1,6 +1,5 @@
 <div>
  {{#each this.statuses as |status|}}
-  <div name={{status.value}}></div>
    {{status.value}}
   {{on 'click' this.changeStatus(status.value) }}
  {{/each}}
