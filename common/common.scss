@@ -1,0 +1,27 @@
+ol.category-breadcrumb {
+    display: none;
+}
+
+#navigation-bar {
+    display: none;
+    color:(--primary-medium);
+}
+
+div.customized-filter {
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+}
+
+div.customized-filter > button {
+    border: none;
+    border-style: none;
+    font-size: var(--font-up-1);
+    &:hover {
+        border-top: 1px solid var(--primary-medium);
+    }
+
+
+
+
+}

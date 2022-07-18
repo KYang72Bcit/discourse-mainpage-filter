@@ -42,15 +42,8 @@ export default {
   actions: {
     changeStatus(newStatus) {
       const router = getOwner(this).lookup("router:main");
-      
       router.transitionTo({ queryParams: { solved: newStatus } });
     },
-
-    getDisnitation (value) {
-      //const router = getOwner(this).lookup("router:main");
-      console.log (value);
-
-    }
   },
 
   
