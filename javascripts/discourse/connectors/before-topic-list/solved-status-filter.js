@@ -21,7 +21,7 @@ export default {
   },
 
   setupComponent(args, component) {
-    const statuses = ["all", "solved", "unsolved"].map((status) => {
+    const statuses = ["Recent", "Solved", "Unsolved"].map((status) => {
       return {
         name: I18n.t(`solved.topic_status_filter.${status}`),
         value: status,
@@ -31,21 +31,28 @@ export default {
 
     const queryStrings = window.location.search;
     if (queryStrings.match(/solved=yes/)) {
-      component.set("status", "solved");
+      component.set("status", "Solved");
     } else if (queryStrings.match(/solved=no/)) {
-      component.set("status", "unsolved");
+      component.set("status", "Unsolved");
     } else {
-      component.set("status", "all");
+      component.set("status", "Recent");
     }
   },
 
   actions: {
     changeStatus(newStatus) {
       const router = getOwner(this).lookup("router:main");
-      if (newStatus && newStatus !== "all") {
+      if (newStatus && newStatus !== "Recent") {
         newStatus = newStatus === "solved" ? "yes" : "no";
       }
       router.transitionTo({ queryParams: { solved: newStatus } });
     },
+
+    getDisnitation (value) {
+      const router = getOwner(this).lookup("router:main");
+      
+    }
   },
+
+  
 };
