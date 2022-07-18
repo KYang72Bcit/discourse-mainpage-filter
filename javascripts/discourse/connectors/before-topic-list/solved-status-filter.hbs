@@ -1,7 +1,7 @@
 <div>
  {{#each this.statuses as |status|}}
    {{status.value}}
-  {{on 'click' this.changeStatus(status.value) }}
+  {{on 'click' this.changeStatus status.value}}
  {{/each}}
 </div>
   
