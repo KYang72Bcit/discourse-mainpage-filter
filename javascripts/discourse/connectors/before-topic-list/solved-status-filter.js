@@ -42,7 +42,12 @@ export default {
   actions: {
     changeStatus(newStatus) {
       const router = getOwner(this).lookup("router:main");
-      router.transitionTo({ queryParams: { solved: newStatus } });
+      if (newStatus ==="Unanswered") {
+        router.transitionTo('max_posts', 1)
+      } else {
+        router.transitionTo({ queryParams: { solved: newStatus } });
+      }
+      
     },
   },
 
