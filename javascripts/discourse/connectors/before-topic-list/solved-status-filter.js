@@ -43,23 +43,23 @@ export default {
     } else {
       component.set("status", "Unanswered");
     }
-    withPluginApi("0.11", (api) =>{
-      api.onPageChange(() => {
+    // withPluginApi("0.11", (api) =>{
+    //   api.onPageChange(() => {
 
-        const buttonList = document.querySelector(".customized-filter").children;
-        //console.log(buttonList);
-        buttonList.forEach(element => {
-          element.addEventListener('click', function(){
-            element.parentNode.querySelector(".get-active").classList.remove("get-active");
-            element.classList.add("get-active");
-          })
-        })
+    //     const buttonList = document.querySelector(".customized-filter").children;
+    //     //console.log(buttonList);
+    //     buttonList.forEach(element => {
+    //       element.addEventListener('click', function(){
+    //         element.parentNode.querySelector(".get-active").classList.remove("get-active");
+    //         element.classList.add("get-active");
+    //       })
+    //     })
         
 
 
 
-      })
-    })
+    //   })
+    // })
 
   },
 
