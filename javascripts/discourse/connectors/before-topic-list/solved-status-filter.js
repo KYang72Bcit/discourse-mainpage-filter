@@ -30,6 +30,7 @@ export default {
     component.set("statuses", statuses);
 
     const queryStrings = window.location.search;
+    console.log(queryStrings);
     if (queryStrings.match(/solved=yes/)) {
       component.set("status", "Solved");
     } else if (queryStrings.match(/solved=no/)) {
