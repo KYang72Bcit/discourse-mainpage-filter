@@ -16,6 +16,9 @@ div.navigation-container {
         &:hover {
             background-color: var(--tertiary-hover);
         }
+        svg {
+            color:var(--header_background)
+        }
         }
         
         
