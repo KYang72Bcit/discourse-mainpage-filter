@@ -63,10 +63,15 @@ export default Component.extend({
         params.push(`min_posts=2`);
       }
     }
-    const router = getOwner(this).lookup("router:main");
-    console.log(router.currentRouteName);
+    // const router = getOwner(this).lookup("router:main");
+    // console.log(router.currentRouteName);
     queryStrings = params.length > 0 ? `?${params.join("&")}` : "";
-    DiscourseURL.routeTo(`${location.pathname}${queryStrings}${location.hash}`);
+    // DiscourseURL.routeTo(`${location.pathname}${queryStrings}${location.hash}`);
+    if (history.pushState) {
+      console.log("finish");
+      var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?max_posts=1';
+      window.history.pushState({path:newurl},'',newurl);
+  }
   },
 });
 
