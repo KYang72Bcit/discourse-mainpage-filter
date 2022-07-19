@@ -8,6 +8,8 @@ div.navigation-container {
     justify-items: end;
     .navigation-controls {
         grid-column-start: 3;
+        position: relative;
+        top: -30px;
     }
 }
 
