@@ -3,13 +3,15 @@
    Recent
   </button>
 
+   <button type="button" {{on 'click' (fn this.changeStatus "no")}}>
+    Unsolved
+  </button>
+
    <button type="button" {{on 'click' (fn this.changeStatus "yes")}}>
     Solved
   </button>
 
-   <button type="button" {{on 'click' (fn this.changeStatus "no")}}>
-    Unsolved
-  </button>
+  
 
   {{unanswered-topic}}
 
