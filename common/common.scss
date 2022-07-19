@@ -10,6 +10,12 @@ div.navigation-container {
         grid-column-start: 3;
         position: relative;
         top: 33px;
+        background-color: var(--tertiary);
+        color: var(--header_background);
+        &:hover {
+            background-color: var(--terniary-hover);
+        }
+        
     }
 }
 
