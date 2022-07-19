@@ -48,7 +48,7 @@ export default Component.extend({
     let location = window.location;
     let queryStrings = location.search;
     let params = queryStrings.startsWith("?")
-      ? queryStrings.substring(1).split("&")
+      ? queryStrings.substring(1).split("&", 1)
       : [];
 
     params = params.filter((param) => {
