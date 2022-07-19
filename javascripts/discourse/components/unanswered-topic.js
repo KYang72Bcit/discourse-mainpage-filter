@@ -67,11 +67,8 @@ export default Component.extend({
     // console.log(router.currentRouteName);
     queryStrings = params.length > 0 ? `?${params.join("&")}` : "";
     // DiscourseURL.routeTo(`${location.pathname}${queryStrings}${location.hash}`);
-    console.log(history.pushState);
-    if (history.pushState) {
-      var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?max_posts=1';
-      window.history.pushState({path:newurl},'',newurl);
-  }
+    var myURL = document.location;
+  document.location = myURL + "?max_posts=1";
   },
 });
 
