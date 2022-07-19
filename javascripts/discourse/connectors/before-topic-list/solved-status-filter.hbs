@@ -11,9 +11,16 @@
     Solved
   </button>
 
-  
-
   {{unanswered-topic}}
+
+  {{create-topic-button
+    canCreateTopic=canCreateTopic
+    action=(action "clickCreateTopicButton")
+    disabled=createTopicButtonDisabled
+    label=createTopicLabel
+    btnClass=createTopicClass
+    canCreateTopicOnTag=canCreateTopicOnTag
+  }}
 
   
 
