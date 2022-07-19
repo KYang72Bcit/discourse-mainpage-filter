@@ -2,6 +2,12 @@ ol.category-breadcrumb {
     display: none;
 }
 
+div.navigation-container {
+    display: grid;
+    grid-template-columns: 10% 10% 80%;
+    justify-items: end;
+}
+
 #navigation-bar {
     display: none;
     color:(--primary-medium);
