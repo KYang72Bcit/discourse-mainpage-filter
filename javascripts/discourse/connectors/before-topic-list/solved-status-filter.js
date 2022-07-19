@@ -1,6 +1,8 @@
 import I18n from "I18n";
 import { getOwner } from "discourse-common/lib/get-owner";
 
+
+
 export default {
   shouldRender(args, component) {
     const router = getOwner(this).lookup("router:main");
@@ -44,8 +46,8 @@ export default {
 
   actions: {
     changeStatus(newStatus) {
-      const router = getOwner(this).lookup("router:main");
-      console.log(router.currentRouteName);
+      console.log(this.parentNode.classList);
+      
       
         router.transitionTo({ queryParams: { solved: newStatus } });
       
