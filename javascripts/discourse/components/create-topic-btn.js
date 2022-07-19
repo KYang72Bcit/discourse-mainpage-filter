@@ -12,11 +12,9 @@ export default Component.extend(FilterModeMixin, {
 
     actions: {
         clickCreateTopicButton() {
-            if (this.categoryReadOnlyBanner && !this.hasDraft) {
-              bootbox.alert(this.categoryReadOnlyBanner);
-            } else {
+            
               this.createTopic();
-            }
+            
           },
 
     }
