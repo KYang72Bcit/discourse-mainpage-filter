@@ -34,3 +34,17 @@ div.customized-filter  button {
 div.customized-filter div {
     text-align: center;
 }
+
+@media screen and (max-width:980px) {
+    div.customized-filter {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    div.customized-filter {
+        width: 100%;
+    }
+
+}
