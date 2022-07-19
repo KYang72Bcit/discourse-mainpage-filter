@@ -67,8 +67,18 @@ export default Component.extend({
     // console.log(router.currentRouteName);
     queryStrings = params.length > 0 ? `?${params.join("&")}` : "";
     // DiscourseURL.routeTo(`${location.pathname}${queryStrings}${location.hash}`);
-    let newUrlWithQueryString = 'max_posts=1';
-    window.history.pushState('obj', 'newtitle', newUrlWithQueryString)
+    var url = window.location.href;
+    var urlParts = url.split('?');
+    if (urlParts.length > 0) {
+        var baseUrl = urlParts[0];
+        var queryString = urlParts[1];
+   
+        //update queryString in here...I have added a new string at the end in this example
+        var updatedQueryString = "max_post=1" ;
+   
+        var updatedUri = baseUrl + '?' + updatedQueryString;
+        window.history.replaceState({}, document.title, updatedUri);
+    }
   },
 });
 
