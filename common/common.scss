@@ -34,6 +34,10 @@ div.customized-filter  button {
 div.customized-filter div {
     text-align: center;
 }
+.get-active {
+    color: var(--tertiary);
+    border-top: solid 1px var(--tertiary);
+}
 
 @media screen and (max-width:980px) {
     div.customized-filter {
