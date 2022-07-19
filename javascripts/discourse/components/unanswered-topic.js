@@ -62,7 +62,8 @@ export default Component.extend({
         params.push(`min_posts=2`);
       }
     }
-
+    getOwner(this).lookup("router:main");
+    console.log(router.currentRouteName);
     queryStrings = params.length > 0 ? `?${params.join("&")}` : "";
     DiscourseURL.routeTo(`${location.pathname}${queryStrings}${location.hash}`);
   },
