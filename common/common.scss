@@ -47,7 +47,8 @@ div.customized-filter  button {
     background-color: var(--header_background);
     padding: 0.3rem;
     &:hover {
-        border-top: 1px solid var(--primary-medium);
+        color: var(--tertiarym);
+        border-top: 1.5px solid var(--tertiarym);
     }
 
 
