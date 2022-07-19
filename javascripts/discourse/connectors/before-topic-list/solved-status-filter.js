@@ -42,11 +42,23 @@ export default {
     } else {
       component.set("status", "Unanswered");
     }
+    withPluginApi("0.11", (api) =>{
+      api.onPageChange(() => {
+
+        const buttonList = document.querySelector(".customized-filter").children;
+        console.log(buttonList);
+        
+
+
+
+      })
+    })
+
   },
 
   actions: {
     changeStatus(newStatus) {
-      console.log(this.parentNode.classList);
+      
       
       
         router.transitionTo({ queryParams: { solved: newStatus } });
