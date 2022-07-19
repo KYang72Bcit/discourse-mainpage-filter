@@ -78,6 +78,7 @@ export default Component.extend({
    
         var updatedUri = baseUrl + '?' + updatedQueryString;
         window.history.replaceState({}, document.title, updatedUri);
+        location.reload();
     }
   },
 });
