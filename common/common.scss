@@ -6,6 +6,9 @@ div.navigation-container {
     display: grid;
     grid-template-columns: 10% 10% 80%;
     justify-items: end;
+    .navigation-controls {
+        grid-column-start: 3;
+    }
 }
 
 #navigation-bar {
