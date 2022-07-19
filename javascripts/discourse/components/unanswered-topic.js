@@ -4,6 +4,7 @@ import discourseComputed from "discourse-common/utils/decorators";
 import DiscourseURL from "discourse/lib/url";
 import { inject as service } from "@ember/service";
 import I18n from "I18n";
+import { getOwner } from "discourse-common/lib/get-owner";
 
 export default Component.extend({
   router: service(),
