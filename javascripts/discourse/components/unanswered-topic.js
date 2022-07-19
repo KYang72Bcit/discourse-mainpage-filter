@@ -77,8 +77,9 @@ export default Component.extend({
         var updatedQueryString = "max_post=1" ;
    
         var updatedUri = baseUrl + '?' + updatedQueryString;
-        window.history.replaceState({}, document.title, updatedUri);
-        location.reload();
+        //window.history.replaceState({}, document.title, updatedUri);
+        window.location.replace(updatedUri);
+        //location.reload();
         
         
     }
