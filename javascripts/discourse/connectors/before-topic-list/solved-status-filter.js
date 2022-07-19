@@ -1,5 +1,6 @@
 import I18n from "I18n";
 import { getOwner } from "discourse-common/lib/get-owner";
+import { withPluginApi } from "discourse/lib/plugin-api";
 
 
 
