@@ -8,16 +8,16 @@ export default {
     if (
       !component.siteSettings.show_filter_by_solved_status ||
       router.currentPath === "discovery.categories"
-    ) { return false;}
+    ) {
+      return false;
+    } else if (component.siteSettings.allow_solved_on_all_topics) {
       return true;
-    // } else if (component.siteSettings.allow_solved_on_all_topics) {
-    //   return true;
-    // } else {
-    //   const controller = getOwner(this).lookup(
-    //     "controller:navigation/category"
-    //   );
-    //   return controller && controller.get("category.enable_accepted_answers");
-    // }
+    } else {
+      const controller = getOwner(this).lookup(
+        "controller:navigation/category"
+      );
+      return controller && controller.get("category.enable_accepted_answers");
+    }
   },
 
   setupComponent(args, component) {
@@ -44,10 +44,7 @@ export default {
   actions: {
     changeStatus(newStatus) {
       const router = getOwner(this).lookup("router:main");
-      // if (newStatus ==="Unanswered") {
-      //   console.log("unanswered");
-        
-      // } 
+      
         router.transitionTo({ queryParams: { solved: newStatus } });
       
       
