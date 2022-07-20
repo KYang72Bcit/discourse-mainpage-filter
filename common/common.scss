@@ -63,13 +63,6 @@ div.customized-filter div {
         width: 80%;
     }
 
-}
-
-@media screen and (max-width:600px) {
-    div.customized-filter {
-        width: 100%;
-    }
-
     div.navigation-container {
         display: grid;
         grid-template-columns: 100%;
@@ -83,5 +76,14 @@ div.customized-filter div {
             
         }
     }
+
+}
+
+@media screen and (max-width:600px) {
+    div.customized-filter {
+        width: 100%;
+    }
+
+
 
 }
