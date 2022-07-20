@@ -34,8 +34,9 @@ div.navigation-container {
 
 div.customized-filter {
     width: 45%;
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
+    display: flex;
+    // grid-template-columns: repeat(4, 25%);
+    flex-wrap: wrap;
 }
 
 div.customized-filter  button {
