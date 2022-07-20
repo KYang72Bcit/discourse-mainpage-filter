@@ -29,14 +29,12 @@ div.navigation-container {
     display: none;
     color:(--primary-medium);
 }
-// #create-topic {
-//     display: none;
-// }
+
 
 div.customized-filter {
-    width: 80%;
+    width: 45%;
     display: grid;
-    grid-template-columns: 15% 15% 15% 15% 40%;
+    grid-template-columns: repeat(4, 25%);
 }
 
 div.customized-filter  button {
@@ -50,9 +48,6 @@ div.customized-filter  button {
         color: var(--tertiary);
         border-top: 1.5px solid var(--tertiary);
     }
-
-
-
 
 }
 div.customized-filter div {
@@ -73,6 +68,20 @@ div.customized-filter div {
 @media screen and (max-width:600px) {
     div.customized-filter {
         width: 100%;
+    }
+
+    div.navigation-container {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: start;
+        .navigation-controls {
+            grid-column-start: 1;
+            position: relative;
+            top: 0px;
+            
+            
+            
+        }
     }
 
 }
