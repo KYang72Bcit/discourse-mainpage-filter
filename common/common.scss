@@ -35,8 +35,12 @@ div.navigation-container {
 div.customized-filter {
     width: 45%;
     display: flex;
-    // grid-template-columns: repeat(4, 25%);
     flex-wrap: wrap;
+}
+
+span.solved-status-filter {
+    position: relative;
+    top: 80px;
 }
 
 div.customized-filter  button {
