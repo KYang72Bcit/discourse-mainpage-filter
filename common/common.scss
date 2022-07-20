@@ -10,7 +10,7 @@ div.navigation-container {
         grid-column-start: 3;
         position: relative;
         right:10px;
-        top: 80px;
+        top: 40px;
         button {
         background-color: var(--tertiary);
         color: var(--header_background);
@@ -38,10 +38,7 @@ div.customized-filter {
     flex-wrap: wrap;
 }
 
-// span.solved-status-filter {
-//     position: relative;
-//     top: 50px;
-// }
+
 
 div.customized-filter  button {
     text-align: center;
@@ -50,8 +47,6 @@ div.customized-filter  button {
     font-size: var(--font-up-1);
     background-color: var(--header_background);
     padding: 0.3rem;
-    // position:relative;
-    // top:50px;
     &:hover {
         color: var(--tertiary);
         border-top: 1.5px solid var(--tertiary);
@@ -89,9 +84,10 @@ div.customized-filter div {
     }
 
 }
-// .customized-filter{
-//     top:120px;
-// }
+.customized-filter{
+    position: relative;
+    top:120px;
+}
 // .customized-filter button {
 //     position: relative;
 //     top: 40px;
