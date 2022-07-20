@@ -45,6 +45,7 @@ div.customized-filter  button {
     font-size: var(--font-up-1);
     background-color: var(--header_background);
     padding: 0.3rem;
+    top:40px;
     &:hover {
         color: var(--tertiary);
         border-top: 1.5px solid var(--tertiary);
@@ -82,14 +83,14 @@ div.customized-filter div {
     }
 
 }
-.customized-filter{
-    top:120px;
-}
-.customized-filter button {
-    position: relative;
-    // top: 40px;
+// .customized-filter{
+//     top:120px;
+// }
+// .customized-filter button {
+//     position: relative;
+//     top: 40px;
 
-}
+// }
 
 @media screen and (max-width:1100px){
     .customized-filter button{
