@@ -82,7 +82,12 @@ div.customized-filter div {
 @media screen and (max-width:600px) {
     div.customized-filter {
         width: 100%;
+
     }
+    div.customized-filter  button {
+        font-size:var(--font-down-1) ;
+    }
+    
 
 
 
