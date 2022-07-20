@@ -78,6 +78,20 @@ div.customized-filter div {
     }
 
 }
+.customized-filter {
+    position: relative;
+    top: 40px;
+
+}
+
+@media screen and (max-width:1100px){
+    .customized-filter {
+        top: 0px;
+    
+    }
+    
+}
+
 
 @media screen and (max-width:600px) {
     div.customized-filter {
