@@ -9,7 +9,7 @@ div.navigation-container {
     .navigation-controls {
         grid-column-start: 3;
         position: relative;
-        right :10px;
+        right:10px;
         top: 80px;
         button {
         background-color: var(--tertiary);
@@ -45,8 +45,8 @@ div.customized-filter  button {
     font-size: var(--font-up-1);
     background-color: var(--header_background);
     padding: 0.3rem;
-    position:relative;
-    top:50px;
+    // position:relative;
+    // top:50px;
     &:hover {
         color: var(--tertiary);
         border-top: 1.5px solid var(--tertiary);
