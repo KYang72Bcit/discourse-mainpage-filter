@@ -9,7 +9,7 @@ div.navigation-container {
     .navigation-controls {
         grid-column-start: 3;
         position: relative;
-        left:5px;
+        right :5px;
         top: 75px;
         button {
         background-color: var(--tertiary);
