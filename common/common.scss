@@ -40,7 +40,7 @@ div.customized-filter {
 
 
 
-div.customized-filter  button, .currentIn {
+div.customized-filter  button {
     text-align: center;
     margin: auto 1rem;
     border: none;
@@ -54,6 +54,11 @@ div.customized-filter  button, .currentIn {
         border-top: 1.5px solid var(--tertiary);
     }
 
+}
+.currentIn {
+    font-weight: 700;
+    color: var(--tertiary);
+    
 }
 div.customized-filter div {
     text-align: center;
