@@ -36,13 +36,13 @@ export default {
   actions: {
     changeStatus(newStatus) {
         const btn = document.querySelector(`#${newStatus}`);
-        const siblings = btn.parentNode.children;
-        console.log(siblings);
-        // siblings.forEach(sibling =>{
-        //   if(sibling.classList.contains('currentIn')) {
-        //     sibling.classList.remove('currentIn');
-        //   }})
-        // btn.classList.add('currentIn'); 
+        const siblings = btn.parentNode.childNodes;
+        
+        siblings.forEach(sibling =>{
+          if(sibling.classList.contains('currentIn')) {
+            sibling.classList.remove('currentIn');
+          }})
+        btn.classList.add('currentIn'); 
         const router = getOwner(this).lookup("router:main");
         router.transitionTo({ queryParams: { solved: newStatus } });
       
