@@ -32,17 +32,17 @@ export default {
     });
     component.set("statuses", statuses);
 
-    const queryStrings = window.location.search;
+    // const queryStrings = window.location.search;
     
-    if (queryStrings.match(/solved=yes/)) {
-      component.set("status", "Solved");
-    } else if (queryStrings.match(/solved=no/)) {
-      component.set("status", "Unsolved");
-    } else if (queryStrings.match(/solved=Recent/)){
-      component.set("status", "Recent");
-    } else {
-      component.set("status", "Unanswered");
-    }
+    // if (queryStrings.match(/solved=yes/)) {
+    //   component.set("status", "Solved");
+    // } else if (queryStrings.match(/solved=no/)) {
+    //   component.set("status", "Unsolved");
+    // } else if (queryStrings.match(/solved=Recent/)){
+    //   component.set("status", "Recent");
+    // } else {
+    //   component.set("status", "Unanswered");
+    // }
 
   },
 
@@ -54,12 +54,8 @@ export default {
       
       
     },
-    removeClass() {
-
-    },
-    addClass() {
-      
-    }
+    
+   
   },
 
   
