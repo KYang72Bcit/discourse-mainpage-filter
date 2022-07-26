@@ -37,7 +37,7 @@ export default {
     changeStatus(newStatus) {
         const btn = document.querySelector(`#${newStatus}`);
         const siblings = btn.parentNode.childNodes;
-        
+        console.log(siblings);
         siblings.forEach(sibling =>{
           if(sibling.classList.contains('currentIn')) {
             sibling.classList.remove('currentIn');
