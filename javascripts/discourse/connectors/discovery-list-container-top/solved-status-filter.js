@@ -43,30 +43,23 @@ export default {
     } else {
       component.set("status", "Unanswered");
     }
-    // withPluginApi("0.11", (api) =>{
-    //   api.onPageChange(() => {
-
-    //     const buttonList = document.querySelector(".customized-filter").children;
-    //     //console.log(buttonList);
-    //     for (i = 0; i < buttonList.length; i++) {
-    //       buttonList[i].addEventListener('click', function(){
-    //         buttonList[i].parentNode.querySelector(".get-active").classList.remove("get-active");
-    //         buttonList[i].classList.add("get-active");
-    //       })
-    //     }      
-    //   })
-    // })
 
   },
 
   actions: {
     changeStatus(newStatus) {
-      
+        console.log(this);
         const router = getOwner(this).lookup("router:main");
         router.transitionTo({ queryParams: { solved: newStatus } });
       
       
     },
+    removeClass() {
+
+    },
+    addClass() {
+      
+    }
   },
 
   
