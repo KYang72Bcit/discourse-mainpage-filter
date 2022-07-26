@@ -39,7 +39,7 @@ export default {
         const siblings = btn.parentNode.childNodes;
         console.log(siblings);
         siblings.forEach(sibling =>{
-          if(sibling.classList.contains('currentIn')) {
+          if(sibling.classList && sibling.classList.contains('currentIn')) {
             sibling.classList.remove('currentIn');
           }})
         btn.classList.add('currentIn'); 
