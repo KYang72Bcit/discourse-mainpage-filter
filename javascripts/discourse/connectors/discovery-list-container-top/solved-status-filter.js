@@ -32,23 +32,17 @@ export default {
     });
     component.set("statuses", statuses);
 
-    // const queryStrings = window.location.search;
-    
-    // if (queryStrings.match(/solved=yes/)) {
-    //   component.set("status", "Solved");
-    // } else if (queryStrings.match(/solved=no/)) {
-    //   component.set("status", "Unsolved");
-    // } else if (queryStrings.match(/solved=Recent/)){
-    //   component.set("status", "Recent");
-    // } else {
-    //   component.set("status", "Unanswered");
-    // }
-
   },
 
   actions: {
     changeStatus(newStatus) {
-        console.log(this);
+        const btn = document.querySelector(`#${newStatus}`);
+        const siblings = btn.parentNode.children;
+        siblings.forEach(sibling =>{
+          if(sibling.classList.contains('currentIn')) {
+            sibling.classList.remove('currentIn');
+          }})
+        btn.classList.add('currentIn'); 
         const router = getOwner(this).lookup("router:main");
         router.transitionTo({ queryParams: { solved: newStatus } });
       
