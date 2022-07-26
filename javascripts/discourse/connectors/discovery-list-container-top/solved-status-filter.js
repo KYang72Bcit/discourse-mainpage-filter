@@ -49,8 +49,8 @@ export default {
   actions: {
     changeStatus(newStatus) {
         console.log(this);
-        // const router = getOwner(this).lookup("router:main");
-        // router.transitionTo({ queryParams: { solved: newStatus } });
+        const router = getOwner(this).lookup("router:main");
+        router.transitionTo({ queryParams: { solved: newStatus } });
       
       
     },
