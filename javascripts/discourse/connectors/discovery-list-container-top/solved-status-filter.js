@@ -37,11 +37,12 @@ export default {
     changeStatus(newStatus) {
         const btn = document.querySelector(`#${newStatus}`);
         const siblings = btn.parentNode.children;
-        siblings.forEach(sibling =>{
-          if(sibling.classList.contains('currentIn')) {
-            sibling.classList.remove('currentIn');
-          }})
-        btn.classList.add('currentIn'); 
+        console.log(siblings);
+        // siblings.forEach(sibling =>{
+        //   if(sibling.classList.contains('currentIn')) {
+        //     sibling.classList.remove('currentIn');
+        //   }})
+        // btn.classList.add('currentIn'); 
         const router = getOwner(this).lookup("router:main");
         router.transitionTo({ queryParams: { solved: newStatus } });
       
