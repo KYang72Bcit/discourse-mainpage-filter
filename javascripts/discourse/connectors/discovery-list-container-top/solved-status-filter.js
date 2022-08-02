@@ -6,7 +6,7 @@ import { getOwner } from "discourse-common/lib/get-owner";
 export default {
   shouldRender(args, component) {
     const router = getOwner(this).lookup("router:main");
-
+    console.log("current router name",router.currentRouteName);
     if (
       !component.siteSettings.show_filter_by_solved_status ||
       router.currentRouteName === "discovery.categories"
