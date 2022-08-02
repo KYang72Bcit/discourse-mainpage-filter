@@ -9,7 +9,7 @@ export default {
 
     if (
       !component.siteSettings.show_filter_by_solved_status ||
-      router.currentPath === "discovery.categories"
+      router.currentRouteName === "discovery.categories"
     ) {
       return false;
     } else if (component.siteSettings.allow_solved_on_all_topics) {
