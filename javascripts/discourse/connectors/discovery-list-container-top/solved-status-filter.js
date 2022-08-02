@@ -8,8 +8,8 @@ export default {
     const router = getOwner(this).lookup("router:main");
     console.log("current router name",router.currentRouteName);
     if (
-      !component.siteSettings.show_filter_by_solved_status ||
-      router.currentRouteName === "discovery.categories"
+      !component.siteSettings.show_filter_by_solved_status 
+      // || router.currentRouteName === "discovery.categories"
     ) {
       return false;
     } else if (component.siteSettings.allow_solved_on_all_topics) {
