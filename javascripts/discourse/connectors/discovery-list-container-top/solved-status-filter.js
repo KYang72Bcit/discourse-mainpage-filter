@@ -8,9 +8,10 @@ import discourseComputed, { observes } from "discourse-common/utils/decorators";
 export default {
   shouldRender(args, component) {
     const router = getOwner(this).lookup("router:main");
-    console.log("current router name",router.currentRouteName);
+    // console.log("current router name",router.currentRouteName);
     if (
-      !component.siteSettings.show_filter_by_solved_status 
+      !component.siteSettings.show_filter_by_solved_status ||
+      router.currentRouteName === "discovery.categories"
     ) {
       return false;
     } else if (component.siteSettings.allow_solved_on_all_topics) {
@@ -38,7 +39,7 @@ export default {
     changeStatus(newStatus) {
         const btn = document.querySelector(`#${newStatus}`);
         const siblings = btn.parentNode.childNodes;
-        console.log(siblings);
+       
         siblings.forEach(sibling =>{
           if(sibling.classList && sibling.classList.contains('currentIn')) {
             sibling.classList.remove('currentIn');
