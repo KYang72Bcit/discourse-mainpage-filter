@@ -1,5 +1,7 @@
 import I18n from "I18n";
 import { getOwner } from "discourse-common/lib/get-owner";
+import { and } from "@ember/object/computed";
+import discourseComputed, { observes } from "discourse-common/utils/decorators";
 
 
 
@@ -9,7 +11,6 @@ export default {
     console.log("current router name",router.currentRouteName);
     if (
       !component.siteSettings.show_filter_by_solved_status 
-      || router.currentRouteName === "discovery.categories"
     ) {
       return false;
     } else if (component.siteSettings.allow_solved_on_all_topics) {
