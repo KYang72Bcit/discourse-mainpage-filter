@@ -8,10 +8,10 @@ import discourseComputed, { observes } from "discourse-common/utils/decorators";
 export default {
   shouldRender(args, component) {
     const router = getOwner(this).lookup("router:main");
-    // console.log("current router name",router.currentRouteName);
+
     if (
       !component.siteSettings.show_filter_by_solved_status ||
-      router.currentRouteName === "discovery.categories"
+      router.currentPath === "discovery.categories"
     ) {
       return false;
     } else if (component.siteSettings.allow_solved_on_all_topics) {
@@ -23,7 +23,6 @@ export default {
       return controller && controller.get("category.enable_accepted_answers");
     }
   },
-
   setupComponent(args, component) {
     const statuses = ["Recent", "Solved", "Unsolved", "Unanswered"].map((status) => {
       return {
