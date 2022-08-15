@@ -9,13 +9,15 @@ import discourseComputed, { observes } from "discourse-common/utils/decorators";
 export default {
   shouldRender(args, component) {
     const router = getOwner(this).lookup("router:main");
+    console.log("component.siteSettings", component.siteSettings);
 
-    if (
-      !component.siteSettings.show_filter_by_solved_status ||
-      router.currentPath === "discovery.categories"
-    ) {
-      return false;
-    } else if (component.siteSettings.allow_solved_on_all_topics) {
+    // if (
+    //   !component.siteSettings.show_filter_by_solved_status ||
+    //   router.currentPath === "discovery.categories"
+    // ) {
+    //   return false;
+    // } else 
+    if (component.siteSettings.allow_solved_on_all_topics) {
       return true;
     } else {
       const controller = getOwner(this).lookup(
