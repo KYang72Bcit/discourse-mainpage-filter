@@ -38,14 +38,19 @@ export default {
     withPluginApi("0.11", (api) => {
       api.onPageChange( ()=> {
         const router = getOwner(this).lookup("router:main");
-        // if(router.currentRouteName === "discovery.categories"){
-        //  // console.log("is in categoreis page", true)
-        //   this.set("inCategoreis", true);
-        // }
-        // else {
-        //   this.set("inCategoreis", false);
-        // }
         router.currentRouteName === "discovery.categories"? this.set("inCategoreis", true):this.set("inCategoreis", false);
+
+        const buttons = document.querySelector('.customized-filter');
+          if(router.currentRouteName === "discovery.categories")
+          {
+            if (buttons && !buttons.classList.contains("do-not-display")){
+              buttons.classList.add("do-not-display")
+            }
+          } else {
+            if(buttons && buttons.classList.contains('do-not-display')){
+              buttons.classList.remove('do-not-display');
+             }
+          }
 
       })
 
