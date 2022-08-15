@@ -1,7 +1,7 @@
 {{#if siteSettings.solved_enabled }}
 
-{{#if notInCategoreis }}
-  <div class="customized-filter">
+{{#unless inCategoreis}}
+<div class="customized-filter">
   <button type="button" id="Recent" {{on 'click' (fn this.changeStatus "Recent" )}}>
    Recent
   </button>
@@ -15,7 +15,10 @@
   </button>
 </div>
   
-{{/if}}
+{{/unless}}
+
+  
+  
 
     
   {{/if}}

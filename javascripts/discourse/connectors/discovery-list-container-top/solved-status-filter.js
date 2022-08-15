@@ -8,8 +8,8 @@ import discourseComputed, { observes } from "discourse-common/utils/decorators";
 
 export default {
   shouldRender(args, component) {
-    const router = getOwner(this).lookup("router:main");
-    console.log("component.siteSettings", component.siteSettings);
+    //const router = getOwner(this).lookup("router:main");
+    //console.log("component.siteSettings", component.siteSettings);
 
     // if (
     //   !component.siteSettings.show_filter_by_solved_status ||
@@ -38,8 +38,12 @@ export default {
     withPluginApi("0.11", (api) => {
       api.onPageChange( ()=> {
         const router = getOwner(this).lookup("router:main");
-        if(router.currentRouteName !== "discovery.categories"){
-          this.set("notInCategoreis", true);
+        if(router.currentRouteName === "discovery.categories"){
+          console.log("is in categoreis page", true)
+          this.set("inCategoreis", true);
+        }
+        else {
+          this.set("inCategoreis", false);
         }
 
       })
