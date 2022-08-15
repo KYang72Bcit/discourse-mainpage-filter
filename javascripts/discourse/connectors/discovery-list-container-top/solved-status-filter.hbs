@@ -1,3 +1,4 @@
+{{#if siteSettings.solved_enabled}}
 <div class="customized-filter">
   <button type="button" id="Recent" {{on 'click' (fn this.changeStatus "Recent" )}}>
    Recent
@@ -10,11 +11,7 @@
    <button type="button" id="yes" {{on 'click' (fn this.changeStatus "yes")}}>
     Solved
   </button>
-
-
-
-  
-
 </div>
-  
+    
+  {{/if}}
 
