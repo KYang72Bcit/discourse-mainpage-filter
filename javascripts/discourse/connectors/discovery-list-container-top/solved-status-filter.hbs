@@ -1,4 +1,4 @@
-{{#if siteSettings.solved_enabled}}
+{{#if siteSettings.solved_enabled && notInCategoreis }}
 <div class="customized-filter">
   <button type="button" id="Recent" {{on 'click' (fn this.changeStatus "Recent" )}}>
    Recent

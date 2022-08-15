@@ -9,12 +9,13 @@ export default {
   shouldRender(args, component) {
     const router = getOwner(this).lookup("router:main");
 
-    if (
-      !component.siteSettings.show_filter_by_solved_status ||
-      router.currentPath === "discovery.categories"
-    ) {
-      return false;
-    } else if (component.siteSettings.allow_solved_on_all_topics) {
+    // if (
+    //   !component.siteSettings.show_filter_by_solved_status ||
+    //   router.currentPath === "discovery.categories"
+    // ) {
+    //   return false;
+    // } else
+     if (component.siteSettings.allow_solved_on_all_topics) {
       return true;
     } else {
       const controller = getOwner(this).lookup(
@@ -31,6 +32,17 @@ export default {
       };
     });
     component.set("statuses", statuses);
+
+    withPluginApi("0.11", (api) => {
+      api.onPageChange( ()=> {
+        const router = getOwner(this).lookup("router:main");
+        if(router.currentRouteName !== "discovery.categories"){
+          this.set("notInCategoreis", true);
+        }
+
+      })
+
+    })
 
   },
 
