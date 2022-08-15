@@ -1,4 +1,5 @@
 import I18n from "I18n";
+import { withPluginApi } from "discourse/lib/plugin-api";
 import { getOwner } from "discourse-common/lib/get-owner";
 import { and } from "@ember/object/computed";
 import discourseComputed, { observes } from "discourse-common/utils/decorators";
